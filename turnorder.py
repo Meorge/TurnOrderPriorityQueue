@@ -12,7 +12,7 @@ class PrioritizedItem:
         return f"{self.item}"
 
 def make_copy_of_item(item):
-    copy = PrioritizedItem(item.priority, make_copy_of_unit(item.item))
+    copy = PrioritizedItem(item.priority, item.item)
     return copy
 
 def make_copy_of_unit(unit):
@@ -84,13 +84,14 @@ def set_speed(unit, amount):
 
 q = BattleQueue()
 
-collin = Unit(name="A", speed=0.7)
-enemy = Unit(name="B", speed=1.0)
-enemy2 = Unit(name="C", speed=1.2)
-
+collin = Unit(name="P", speed=0.7)
 q.push(collin)
+enemy = Unit(name="1", speed=1.0)
 q.push(enemy)
+enemy2 = Unit(name="2", speed=1.0)
 q.push(enemy2)
+
+
 
 
 # Begin battle
